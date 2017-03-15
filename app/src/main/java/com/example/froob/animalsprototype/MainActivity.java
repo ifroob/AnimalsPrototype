@@ -48,9 +48,10 @@ public class MainActivity extends AppCompatActivity{
         mc.setMediaPlayer(video);
         Uri uri = Uri.parse(path1);
         video.setMediaController(mc);
-        video.setVideoURI(uri);
 
-
+        // You can use an absolute path or an URL
+        // video.setVideoURI(uri);
+        video.setVideoPath("android.resource://" +getPackageName()+ "/"+R.raw.dog);
 
 
         /********** Attach actions for each button here **********/
@@ -91,13 +92,13 @@ public class MainActivity extends AppCompatActivity{
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Context context = getApplicationContext();
-//                CharSequence text = "Button was pressed.";
-//                int duration = LENGTH_SHORT;
-//                Toast toast = makeText(context, text, duration);
-//                toast.show();
-////                mp = MediaPlayer.create(MainActivity.this, R.raw.pic);
-////                mp.start();
+                Context context = getApplicationContext();
+                CharSequence text = "Button was pressed.";
+                int duration = LENGTH_SHORT;
+                Toast toast = makeText(context, text, duration);
+                toast.show();
+//                mp = MediaPlayer.create(MainActivity.this, R.raw.pic);
+//                mp.start();
                 video.start();
             }
         });
