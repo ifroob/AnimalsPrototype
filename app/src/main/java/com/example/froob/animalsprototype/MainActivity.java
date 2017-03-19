@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity{
         video.setMediaController(mc);
 
         // You can use an absolute path or an URL
-        // video.setVideoURI(uri);
-        video.setVideoPath("android.resource://" +getPackageName()+ "/"+R.raw.dog);
+         video.setVideoURI(uri);
+//        video.setVideoPath("android.resource://" +getPackageName()+ "/"+R.raw.dog);
 
 
         /********** Attach actions for each button here **********/
